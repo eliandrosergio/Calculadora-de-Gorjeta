@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Special */
+
+:root {
+    --bg-dark: #e0e5ec;
+    --cor-cabeca: #0077ff;
+    --bg-panel-dark: #b1b1b1;
+    --cor-texto-dark: #000000;
+    --cor-cabeca-dark: #2e74ff;
+}
+
+/* Normal */
+
+a {
+    text-decoration: none;
+    color: var(--cor-cabeca-dark);
+}
+
+a:hover {
+    color: var(--cor-cabeca);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 5% 5%;
+    overflow-x: hidden;
+    background-color: var(--bg-dark);
+
+    font-size: 18px;
+    color: var(--cor-texto-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ID */
+
+#cabeca {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 5% 0px;
+    min-width: 400px;
+    text-align: center;
+    color: var(--cor-cabeca-dark);
+}
+
+#corpo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    height: auto;
+    padding: 25px;
+    min-width: 400px;
+
+    border-radius: 25px;
+    background-color: var(--bg-panel-dark);
+}
+
+#formulario {
+    width: 400px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#gorjeta {
+    height: 50px;
+    max-width: 400px;
+    margin-top: 20px;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gorjeta span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Class */
+
+.caixas {
+    border: none;
+    display: flex;
+}
+
+.inputClass, .opcoes {
+    width: 40%;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 4px 4px 2px 4px;
+    margin: 4px 0px 14px 14px;
+    border-bottom: 3px solid transparent;
+}
+
+.inputClass:focus, .opcoes:focus {
+    outline: none;
+    border-radius: 5px;
+    border-bottom: 3px solid var(--cor-cabeca-dark);
+}
+
+.submitClass {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    padding: 8px 0px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border-bottom: 3px solid transparent;
+}
+
+/* Type */
+
+input[type=submit] {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--cor-cabeca-dark);
+}
+
+/* Media */
+
+@media (max-width: 500px) {
+    #formulario {
+        width: 300px;
+    }
+    
+    #corpo {
+        padding: 20px;
+        min-width: 200px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculador de Gorjeta - by Blazer Stone</title>
+</head>
+<body>
+    <header id="cabeca">
+        <h1>Calculador de Gorjeta</h1>
+        <h3>Js Puro - by Blazer Stone</h3>
+    </header>
+
+    <main id="corpo">
+        <form id="formulario">
+            <fieldset class="caixas">
+                <label for="valor"> Valor da conta em Kwanza:</label>
+
+                <input type="number" name="valor" id="valor" placeholder="100.50" min="0" step="10.00" class="inputClass" required>
+            </fieldset>
+
+            <fieldset class="caixas">
+                <label for="qualidade">Como foi o atendimento?</label>
+
+                <select name="qualidade" id="qualidade" class="opcoes" required>
+                    <option value="1.00">Incrível</option>
+                    <option value="0.75">Ótimo</option>
+                    <option value="0.50" selected>Bom</option>
+                    <option value="0.25">Aceitável</option>
+                    <option value="0.05">Ruim</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="caixas">
+                <label for="numClientes">Quantas pessoas vão pagar?</label>
+
+                <input type="number" name="numClientes" id="numClientes" placeholder="1" min="1" value="1" class="inputClass" required>
+            </fieldset>
+
+            <input type="submit" value="Calcular" class="submitClass">
+        </form>
+
+        <div id="gorjeta"></div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
